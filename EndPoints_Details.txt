@@ -1,0 +1,34 @@
+##EndPoints  : better to use postman to check endpoints and ** to check the endpoints u will do the same order endpoints because 
+               first u want to create new team then process a match and assign the points then results are out
+
+1. http://localhost:3000/api/add-team    - post method 
+	* To create your new team 
+	* example input Parameters:
+
+sample one body data :
+{
+   "name":"Team Four",
+    "players":["RD Gaikwad","DP Conway","PH Solanki","MS Dhoni","Simarjeet Singh","R Ashwin","Deepak Chahar","JC Buttler","TA Boult","Dwayne Bravo","SV Samson"],
+    "captain":"MS Dhoni",
+    "viceCaptain":"RD Gaikwad"
+}
+
+sample two body data :
+
+{
+   "name":"Team Five",
+    "players":["RD Gaikwad","Robin Uthappa","MM Ali","MS Dhoni","Simarjeet Singh","R Ashwin","D Padikkal","M Pathirana","TA Boult","Dwayne Bravo","SV Samson"],
+    "captain":"MS Dhoni",
+    "viceCaptain":"MM Ali"
+}
+
+
+2. http://localhost:3000/api/process-result   - post method
+ 	* To process match result this should calculate points for the players and assign it to the team entries with those players
+	* None input Parameters
+
+3. http://localhost:3000/api/team-result   - get method
+	* To view the list of winner
+	* None input Parameters
+
+
