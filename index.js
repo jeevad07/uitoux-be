@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const index=require('./Route/index');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const cors = require('cors');
 
 // Database Details
 const DB_USER = process.env.DB_USER;
@@ -18,7 +19,7 @@ const uri = `mongodb+srv://${DB_USER}:${DB_PWD}@${DB_URL}/${DB_NAME}?retryWrites
 mongoose.connect(uri)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
-  
+app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
